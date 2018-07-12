@@ -15,6 +15,7 @@ Route::get('/', function () {
     return view('chat');
 });
 
+
 Route::post('/messages', function (\Illuminate\Http\Request $request) {
     //event(new \App\Events\Message($request->input('body')));
     event(new \App\Events\PrivateMessage($request->all()));
